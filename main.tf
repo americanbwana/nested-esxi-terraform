@@ -84,15 +84,15 @@ resource "vsphere_virtual_machine" "vmFromRemoteOvf" {
 
   vapp {
     properties = {
-      "guestinfo.hostname" = "tf-nested-esxi-1.primp-industries.com",
-      "guestinfo.ipaddress" = "192.168.30.180",
-      "guestinfo.netmask" = "255.255.255.0",
-      "guestinfo.gateway" = "192.168.30.1",
-      "guestinfo.dns" = "192.168.30.1",
-      "guestinfo.domain" = "primp-industries.com",
-      "guestinfo.ntp" = "pool.ntp.org",
-      "guestinfo.password" = "VMware1!23",
-      "guestinfo.ssh" = "True"
+      "guestinfo.hostname" = var.hostname,
+      "guestinfo.ipaddress" = var.ipaddress,
+      "guestinfo.netmask" = var.netmask,
+      "guestinfo.gateway" = var.gateway,
+      "guestinfo.dns" = var.dnsServer,
+      "guestinfo.domain" = var.dnsDomain,
+      "guestinfo.ntp" = var.ntpServer,
+      "guestinfo.password" = var.esxiRootPassword,
+      "guestinfo.ssh" = var.enableSsh
     }
   }
 
