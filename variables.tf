@@ -1,5 +1,5 @@
 variable "cluster" { default = "vcf-w1c1" }
-variable "vsphere_resource_pool" { default = "Compute-ResourcePool" }
+variable "vsphere_resource_pool" { default = "resgroup-2429" }
  
 variable "vsphere_user" { default = "administrator@vsphere.local"}
 variable "vsphere_password" { default = "VMware1!"}
